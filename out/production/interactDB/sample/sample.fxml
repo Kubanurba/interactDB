@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="351.0" minWidth="506.0" prefHeight="407.0" prefWidth="691.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Button fx:id="readButt" disable="true" layoutX="22.0" layoutY="16.0" mnemonicParsing="false" onAction="#readFile" prefHeight="27.0" prefWidth="109.0" text="Open" />
+        <TextArea fx:id="forAction" editable="false" layoutX="523.0" layoutY="67.0" prefHeight="268.0" prefWidth="150.0" promptText="Choose LOG file to start">
+            <font>
+                <Font name="Courier" size="13.0" />
+            </font></TextArea>
+        <Text layoutX="268.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" ID:" wrappingWidth="26.88641357421875" />
+        <Text layoutX="240.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+        <Text layoutX="240.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bus Number:" />
+        <Text layoutX="240.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Route Number:" />
+        <Text layoutX="240.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mark:" />
+        <Text layoutX="240.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Year:" />
+        <Text layoutX="240.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mileage:" />
+        <TextField fx:id="forID" editable="false" layoutX="297.0" layoutY="92.0" prefHeight="27.0" prefWidth="27.0" />
+        <TextField fx:id="forName" layoutX="330.0" layoutY="119.0" />
+        <TextField fx:id="forBusNumber" layoutX="331.0" layoutY="156.0" />
+        <TextField fx:id="forRoute" layoutX="331.0" layoutY="192.0" />
+        <TextField fx:id="forMark" layoutX="331.0" layoutY="224.0" />
+        <TextField fx:id="forYear" layoutX="331.0" layoutY="257.0" />
+        <TextField fx:id="forMile" layoutX="331.0" layoutY="292.0" />
+        <Button fx:id="saveJsonButt" disable="true" layoutX="543.0" layoutY="16.0" mnemonicParsing="false" onAction="#saveJson" prefHeight="27.0" prefWidth="110.0" text="Save JSON" />
+        <TextField fx:id="pathField" disable="true" editable="false" layoutX="139.0" layoutY="16.0" prefHeight="27.0" prefWidth="264.0" />
+        <Button fx:id="firstButt" disable="true" layoutX="317.0" layoutY="323.0" mnemonicParsing="false" onAction="#firstEl" prefHeight="27.0" prefWidth="42.0" text="First" />
+        <Button fx:id="lastButt" disable="true" layoutX="463.0" layoutY="323.0" mnemonicParsing="false" onAction="#lastEl" prefHeight="27.0" prefWidth="43.0" text="Last" />
+        <Separator layoutX="2.0" layoutY="56.0" prefHeight="3.0" prefWidth="688.0" />
+        <Button fx:id="prevButt" disable="true" layoutX="363.0" layoutY="323.0" mnemonicParsing="false" onAction="#prevEl" prefHeight="27.0" prefWidth="48.0" text="Prev" />
+        <Button fx:id="nextButt" disable="true" layoutX="412.0" layoutY="323.0" mnemonicParsing="false" onAction="#nextEl" prefHeight="27.0" prefWidth="47.0" text="Next" />
+        <ListView fx:id="listV" layoutX="30.0" layoutY="92.0" onMouseClicked="#changeID" prefHeight="200.0" prefWidth="200.0" />
+        <Button fx:id="changeButt" disable="true" layoutX="359.0" layoutY="361.0" mnemonicParsing="false" onAction="#changeAttr" style="-fx-background-color: #9db5c4#9db5c4;" text="Change &amp; Save">
+            <effect>
+                <ColorAdjust brightness="0.02" contrast="0.05" hue="-0.05" saturation="-0.36" />
+            </effect>
+        </Button>
+        <Button fx:id="logButt" layoutX="30.0" layoutY="307.0" mnemonicParsing="false" onAction="#logOpen" text="Choose LOG" />
+        <Button fx:id="saveActionButt" disable="true" layoutX="548.0" layoutY="348.0" mnemonicParsing="false" onAction="#saveActionFile" text="Save action file" />
+        <Button fx:id="addNewButt" disable="true" layoutX="338.0" layoutY="66.0" mnemonicParsing="false" onAction="#AddRow" text="Add new" />
+        <Button fx:id="deleteButt" disable="true" layoutX="418.0" layoutY="66.0" mnemonicParsing="false" onAction="#deleteRow" prefHeight="27.0" prefWidth="67.0" style="-fx-background-color: #bd2b20#bd2b20;" text="Delete" />
+        <Button fx:id="clearButt" disable="true" layoutX="263.0" layoutY="323.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="27.0" prefWidth="48.0" text="Clear" />
+    </children>
+</AnchorPane>
