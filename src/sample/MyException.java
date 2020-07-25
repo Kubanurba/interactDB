@@ -19,7 +19,7 @@ public class MyException extends Throwable
     static public String LogFileName;
     static TextArea forAction;
 
-    private String msg;
+   private String msg;
     /**
      * конструктор с параметрами
      * @param _msg сообщение об ошибке
@@ -49,7 +49,7 @@ public class MyException extends Throwable
             }
             catch ( IOException exc )
             {
-                exc.getLocalizedMessage();
+               exc.getLocalizedMessage();
             }
         }
     }

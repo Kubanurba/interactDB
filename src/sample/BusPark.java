@@ -34,9 +34,9 @@ public class BusPark
                     .createStatement()
                     .executeQuery("SELECT * FROM busDrivers");
             while(resSet.next()) {
-                list.add(new BusDrivers(resSet.getInt(1) , resSet.getString(2) , resSet.getString(3 ) ,
-                        resSet.getString(4), resSet.getString(5) ,
-                        resSet.getInt(6) , resSet.getInt(7)));
+                    list.add(new BusDrivers(resSet.getInt(1) , resSet.getString(2) , resSet.getString(3 ) ,
+                            resSet.getString(4), resSet.getString(5) ,
+                            resSet.getInt(6) , resSet.getInt(7)));
 
             }
         } catch (ClassNotFoundException | SQLException e) {

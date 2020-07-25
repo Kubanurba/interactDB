@@ -63,7 +63,7 @@ public class Controller{
     private Button saveActionButt;
 
     /*--------------------------------------------Text Areas and Fields-------------------------------------------------*/
-    ///!!!!!
+  ///!!!!!
     @FXML
     private TextArea forAction;
 
@@ -226,12 +226,12 @@ public class Controller{
             Arr.list.get(get_index()).set_start_year(forYear.getText());
             Arr.list.get(get_index()).set_run(forMile.getText());
             int rows = BusPark.conn.createStatement().executeUpdate("UPDATE busDrivers SET Name=\"" + forName.getText() +
-                    "\", Bus_number=\"" + forBusNumber.getText() +
-                    "\", Route_number=\"" + forRoute.getText() +
-                    "\", Mark= \"" + forMark.getText() +
-                    "\", Start_year=" + forYear.getText() +
-                    ", Mileage=" + forMile.getText() +
-                    "\nWHERE id=" + forID.getText());
+                            "\", Bus_number=\"" + forBusNumber.getText() +
+                            "\", Route_number=\"" + forRoute.getText() +
+                            "\", Mark= \"" + forMark.getText() +
+                            "\", Start_year=" + forYear.getText() +
+                            ", Mileage=" + forMile.getText() +
+                            "\nWHERE id=" + forID.getText());
             textAreaActions("Item with ID " + forID.getText() + " has been changed!\n");
         } catch (MyException exc)
         {
@@ -256,7 +256,7 @@ public class Controller{
         forMile.setText(String.valueOf(Arr.list.get(index).get_run()));
     }
 
-    /*---------------------------------------------------------Other--------------------------------------------------------*/
+/*---------------------------------------------------------Other--------------------------------------------------------*/
     public void set_index(int in) {
         index = in;
     }
